@@ -96,6 +96,24 @@
             box-shadow: 0 8px 25px rgba(124, 58, 237, 0.5);
         }
 
+        .buttons-container {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #7c3aed;
+            color: #fff;
+        }
+        
+        .btn-outline:hover {
+            background: rgba(124, 58, 237, 0.2);
+            box-shadow: 0 4px 20px rgba(124, 58, 237, 0.2);
+        }
+
         .footer-links {
             margin-top: 60px;
             display: flex;
@@ -126,7 +144,10 @@
         <h1 class="app-title">English Arena</h1>
         <p class="description">Master English through exciting real-time multiplayer word battles! Compete with players worldwide and climb the global leaderboards.</p>
         
-        <a href="https://play.google.com/store/apps/details?id=com.ahmetselim.englisharena" target="_blank" rel="noopener" class="btn">Download on Google Play</a>
+        <div class="buttons-container">
+            <a href="https://play.google.com/store/apps/details?id=com.ahmetselim.englisharena" target="_blank" rel="noopener" class="btn">Download on Google Play</a>
+            <a href="#" class="btn btn-outline">Download on App Store</a>
+        </div>
 
         <div class="footer-links">
             <a href="/English-arena-legal/">Privacy Policy & Terms</a>
