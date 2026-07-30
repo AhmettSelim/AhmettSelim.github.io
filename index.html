@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Arena: World Battle — Official Developer & Legal Page</title>
-    <meta name="description" content="Official website and privacy policy for English Arena: World Battle by Ahmet Selim Şengüloğlu.">
+    <title>English Arena: World Battle</title>
+    <meta name="description" content="Learn English through fun competitive battles. Play English Arena: World Battle!">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -23,6 +23,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             line-height: 1.6;
         }
 
@@ -44,174 +45,103 @@
         .container {
             position: relative;
             z-index: 1;
-            max-width: 800px;
+            max-width: 600px;
             width: 100%;
-            padding: 60px 24px;
+            padding: 40px 24px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            text-align: center;
         }
 
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #7c3aed, #4f46e5);
+            border-radius: 28px;
+            margin-bottom: 24px;
+            box-shadow: 0 12px 40px rgba(124, 58, 237, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            font-weight: 800;
         }
 
         .app-title {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #a78bfa, #f472b6, #60a5fa);
+            background: linear-gradient(135deg, #ffffff, #a78bfa);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 12px;
-        }
-
-        .developer-badge {
-            display: inline-block;
-            padding: 6px 16px;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 20px;
-            font-size: 0.9rem;
-            color: #a78bfa;
-            font-weight: 500;
-        }
-
-        .card {
-            background: rgba(20, 22, 45, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 32px;
-            width: 100%;
-            margin-bottom: 24px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-        }
-
-        .card h2 {
-            font-size: 1.4rem;
-            color: #fff;
             margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
 
-        .card p, .card li {
+        .description {
+            font-size: 1.1rem;
             color: #9ca3af;
-            font-size: 0.95rem;
-            margin-bottom: 12px;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 16px;
-            margin-top: 16px;
-        }
-
-        .info-box {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 16px;
-            border-radius: 12px;
-        }
-
-        .info-box label {
-            font-size: 0.8rem;
-            color: #6b7280;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            display: block;
-            margin-bottom: 4px;
-        }
-
-        .info-box value {
-            font-size: 0.95rem;
-            color: #e5e7eb;
-            font-weight: 600;
-            word-break: break-all;
+            margin-bottom: 32px;
         }
 
         .btn {
             display: inline-block;
-            padding: 12px 24px;
+            padding: 14px 32px;
             background: linear-gradient(135deg, #7c3aed, #4f46e5);
             color: #fff;
             text-decoration: none;
-            border-radius: 12px;
+            border-radius: 100px;
             font-weight: 600;
+            font-size: 1.1rem;
             transition: all 0.2s ease;
-            margin-top: 12px;
+            box-shadow: 0 4px 20px rgba(124, 58, 237, 0.3);
         }
 
         .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 20px rgba(124, 58, 237, 0.4);
+            box-shadow: 0 8px 25px rgba(124, 58, 237, 0.5);
         }
 
-        footer {
-            margin-top: 40px;
-            text-align: center;
+        .footer-links {
+            margin-top: 60px;
+            display: flex;
+            gap: 20px;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a {
             color: #6b7280;
-            font-size: 0.85rem;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: #a78bfa;
+        }
+
+        .copyright {
+            margin-top: 20px;
+            color: #4b5563;
+            font-size: 0.8rem;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1 class="app-title">English Arena: World Battle</h1>
-            <div class="developer-badge">Developer: Ahmet Selim Şengüloğlu</div>
-        </div>
+        <div class="app-icon">EA</div>
+        <h1 class="app-title">English Arena</h1>
+        <p class="description">Master English through exciting real-time multiplayer word battles! Compete with players worldwide and climb the global leaderboards.</p>
+        
+        <a href="#" class="btn">Download Now</a>
 
-        <div class="card">
-            <h2>📱 App Information</h2>
-            <p><strong>English Arena: World Battle</strong> is a real-time multiplayer educational English quiz game where players around the world compete in fun word battles.</p>
-            
-            <div class="info-grid">
-                <div class="info-box">
-                    <label>Package Name</label>
-                    <value>com.ahmetselim.englisharena</value>
-                </div>
-                <div class="info-box">
-                    <label>Publisher ID</label>
-                    <value>pub-9015611709527564</value>
-                </div>
-                <div class="info-box">
-                    <label>Ad Sellers Verification</label>
-                    <value><a href="/app-ads.txt" style="color:#a78bfa;">app-ads.txt</a></value>
-                </div>
-            </div>
+        <div class="footer-links">
+            <a href="/English-arena-legal/">Privacy Policy & Terms</a>
+            <a href="mailto:ahmetselimsenguloglu@gmail.com">Contact Support</a>
         </div>
-
-        <div class="card">
-            <h2>🔒 Privacy Policy & Data Usage</h2>
-            <p>We take user privacy very seriously. Our application strictly adheres to Google Play and Apple App Store Developer Policies.</p>
-            <ul>
-                <li>We do not share personal user data with unauthorized third parties.</li>
-                <li>We utilize Google AdMob for serving ads, strictly complying with Google EU User Consent (UMP SDK) standards.</li>
-                <li>Advertising ID (IDFA / GAID) is used exclusively for frequency capping and fraud prevention.</li>
-            </ul>
-            <a href="/English-arena-legal/" class="btn">View Full Legal & Privacy Terms</a>
+        
+        <div class="copyright">
+            &copy; 2026 Ahmet Selim Şengüloğlu. All rights reserved.
         </div>
-
-        <div class="card">
-            <h2>✉️ Developer Contact</h2>
-            <p>If you have any questions, inquiries, or support requests regarding English Arena: World Battle, feel free to contact us:</p>
-            <div class="info-box" style="margin-top:12px;">
-                <label>Support Email</label>
-                <value>ahmetselimsenguloglu@gmail.com</value>
-            </div>
-        </div>
-
-        <footer>
-            &copy; 2026 Ahmet Selim Şengüloğlu. All rights reserved. | English Arena: World Battle
-        </footer>
     </div>
 </body>
 </html>
