@@ -1,30 +1,3 @@
-# app-ads.txt — Fastr Games / English Arena: World Battle
-# https://play.google.com/store/apps/details?id=com.ahmetselim.englisharena
-# https://apps.apple.com/app/id6758234886
-#
-# Bu dosya yalnizca alan adinin KOKUNDE gecerlidir:
-# https://ahmettselim.github.io/app-ads.txt
-# Alt dizinlerdeki kopyalar crawler tarafindan okunmaz.
-#
-# Kural: satir EKLENIR, silinmez. Bir agin satirini silmek, o agin
-# envanterine teklif vermesini aninda durdurur.
-
 OWNERDOMAIN=ahmettselim.github.io
-
-# --- Google AdMob -----------------------------------------------------
-# Hesap "Dishonest Declarations" gerekcesiyle kapali ve itiraz suruyor.
-# Satir BILEREK duruyor: itiraz kabul edilirse silinmis bir satiri geri
-# koymak yeni bir dogrulama turu demek olurdu.
 google.com, pub-9015611709527564, DIRECT, f08c47fec0942fa0
-
-# --- Unity LevelPlay / ironSource -------------------------------------
-# Publisher ID: LevelPlay paneli -> My Account -> API
-# Mediation grubunda bugun yalnizca "ironSource - Bidding" var; baska ag
-# eklendiginde (AppLovin, Meta, Mintegral...) o agin satirlari da buraya
-# eklenmelidir.
 ironsrc.com, 681255, DIRECT
-
-# TODO: ironSource'un reseller satirlari. Liste Unity/ironSource
-# tarafindan yayinlanir ve zaman zaman degisir; panelden alinip buraya
-# eklenecek. Eksik olmasi beyan hatasi degildir, yalnizca bir miktar
-# programatik doluluk kaybidir.
