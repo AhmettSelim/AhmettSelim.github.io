@@ -1,162 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Arena: World Battle</title>
-    <meta name="description" content="Learn English through fun competitive battles. Play English Arena: World Battle!">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#4a9fe8" />
+    <meta name="description" content="Turn English practice into fast competitive matches. Battle live players worldwide or clearly identified AI opponents in English Arena: World Battle." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="English Arena: World Battle" />
+    <meta property="og:description" content="Learn. Battle. Win. Quick English matches, four game modes and global rankings." />
+    <meta property="og:image" content="https://ahmettselim.github.io/assets/arena-feature.png" />
+    <meta property="og:url" content="https://ahmettselim.github.io/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href="assets/app-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>English Arena: World Battle | Learn. Battle. Win.</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: #0a0b1a;
-            color: #e0e0e0;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            line-height: 1.6;
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(ellipse at 20% 50%, rgba(120, 80, 255, 0.15) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 20%, rgba(255, 100, 80, 0.1) 0%, transparent 50%),
-                radial-gradient(ellipse at 50% 80%, rgba(80, 200, 255, 0.1) 0%, transparent 50%);
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        .container {
-            position: relative;
-            z-index: 1;
-            max-width: 600px;
-            width: 100%;
-            padding: 40px 24px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .app-icon {
-            width: 120px;
-            height: 120px;
-            border-radius: 28px;
-            margin-bottom: 24px;
-            box-shadow: 0 12px 40px rgba(124, 58, 237, 0.4);
-            object-fit: cover;
-        }
-
-        .app-title {
-            font-size: 2.8rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #ffffff, #a78bfa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 16px;
-        }
-
-        .description {
-            font-size: 1.1rem;
-            color: #9ca3af;
-            margin-bottom: 32px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 14px 32px;
-            background: linear-gradient(135deg, #7c3aed, #4f46e5);
-            color: #fff;
-            text-decoration: none;
-            border-radius: 100px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.2s ease;
-            box-shadow: 0 4px 20px rgba(124, 58, 237, 0.3);
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(124, 58, 237, 0.5);
-        }
-
-        .buttons-container {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .btn-outline {
-            background: transparent;
-            border: 2px solid #7c3aed;
-            color: #fff;
-        }
-        
-        .btn-outline:hover {
-            background: rgba(124, 58, 237, 0.2);
-            box-shadow: 0 4px 20px rgba(124, 58, 237, 0.2);
-        }
-
-        .footer-links {
-            margin-top: 60px;
-            display: flex;
-            gap: 20px;
-            font-size: 0.9rem;
-        }
-
-        .footer-links a {
-            color: #6b7280;
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        .footer-links a:hover {
-            color: #a78bfa;
-        }
-
-        .copyright {
-            margin-top: 20px;
-            color: #4b5563;
-            font-size: 0.8rem;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <img src="logo.png" alt="English Arena Logo" class="app-icon">
-        <h1 class="app-title">English Arena</h1>
-        <p class="description">Challenge live players worldwide in fast English quiz battles &mdash; or sharpen your skills against clearly identified AI opponents when no live match is available. Climb the global leaderboards as you go.</p>
-        
-        <div class="buttons-container">
-            <a href="https://play.google.com/store/apps/details?id=com.ahmetselim.englisharena" target="_blank" rel="noopener" class="btn">Download on Google Play</a>
-            <a href="https://apps.apple.com/app/id6758234886" target="_blank" rel="noopener" class="btn btn-outline">Download on App Store</a>
+    <header class="site-header">
+      <nav class="nav shell" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="English Arena home">
+          <img src="assets/app-icon.png" alt="" width="50" height="50" />
+          <span><strong>English Arena</strong><small>World Battle</small></span>
+        </a>
+        <div class="nav-links">
+          <a href="#how-it-works">How it works</a>
+          <a href="#game-modes">Game modes</a>
+          <a href="#opponents">Fair play</a>
         </div>
+        <a class="button button-orange nav-cta" href="#download">Play now</a>
+      </nav>
+    </header>
 
-        <div class="footer-links">
-            <a href="/English-arena-legal/">Privacy Policy & Terms</a>
-            <a href="mailto:fastrgamestudio@gmail.com">Contact Support</a>
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-orb orb-left" aria-hidden="true"></div>
+        <div class="hero-orb orb-right" aria-hidden="true"></div>
+        <div class="hero-grid shell">
+          <div class="hero-copy">
+            <div class="eyebrow"><i aria-hidden="true"></i>English practice, built like a game</div>
+            <h1>Learn.<br /><span>Battle.</span> Win.</h1>
+            <p class="hero-lead">Turn English practice into fast competitive matches. Face live players worldwide—or keep playing against a clearly identified AI opponent when matchmaking needs a backup.</p>
+            <div class="store-actions" aria-label="Download English Arena">
+              <a class="store-button" href="https://play.google.com/store/apps/details?id=com.ahmetselim.englisharena" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 2.4c-.4.4-.6 1-.6 1.8v15.6c0 .8.2 1.4.6 1.8l8.8-8.8v-1.6L3 2.4Zm11.6 5.8-2.8 2.9v1.8l2.8 2.9 3.6-2.1c1.1-.6 1.1-1.6 0-2.2l-3.6-2.1V8.2Zm-.7 8L11 13.3 3.6 21c.7.5 1.5.4 2.5-.1l7.8-4.7Zm0-8.4L6.1 3.1c-1-.6-1.8-.6-2.5-.1l7.4 7.7 2.9-2.9Z" /></svg>
+                <span><small>GET IT ON</small><strong>Google Play</strong></span>
+              </a>
+              <a class="store-button" href="https://apps.apple.com/app/id6758234886" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.2 12.7c0-2.7 2.2-4 2.3-4.1-1.3-1.8-3.2-2.1-3.9-2.1-1.7-.2-3.2 1-4.1 1-.9 0-2.2-1-3.7-1-1.9 0-3.7 1.1-4.7 2.8-2 3.4-.5 8.5 1.4 11.3.9 1.4 2.1 2.9 3.6 2.8 1.4-.1 2-1 3.7-1s2.2 1 3.7 1c1.5 0 2.5-1.4 3.4-2.8 1.1-1.6 1.5-3.1 1.5-3.2-.1 0-3.2-1.2-3.2-4.7ZM14.5 4.8c.8-1 1.3-2.3 1.2-3.6-1.2.1-2.6.8-3.4 1.8-.8.9-1.4 2.2-1.2 3.5 1.3.1 2.6-.7 3.4-1.7Z" /></svg>
+                <span><small>Download on the</small><strong>App Store</strong></span>
+              </a>
+            </div>
+            <ul class="hero-tags" aria-label="Game highlights">
+              <li>4 battle modes</li><li>Vocabulary + grammar</li><li>Global rankings</li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" aria-label="English Arena game artwork">
+            <div class="arena-frame">
+              <span class="screw s1"></span><span class="screw s2"></span><span class="screw s3"></span><span class="screw s4"></span>
+              <img src="assets/arena-feature.png" alt="Two fox competitors face each other in the English Arena" width="1024" height="500" />
+              <div class="frame-shine" aria-hidden="true"></div>
+            </div>
+            <div class="floating-badge badge-live"><i aria-hidden="true"></i>Live Opponent</div>
+            <div class="floating-badge badge-ai"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a2 2 0 0 1 2 2v1h2a4 4 0 0 1 4 4v7a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4h2V4a2 2 0 0 1 2-2ZM8 9a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm8 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm-7 6a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2H9Z" /></svg>AI Opponent</div>
+          </div>
         </div>
-        
-        <div class="copyright">
-            &copy; 2026 Ahmet Selim Şengüloğlu. All rights reserved.
+      </section>
+
+      <section class="section section-light" id="how-it-works">
+        <div class="shell">
+          <div class="section-heading centered">
+            <p class="kicker">A faster way to practice</p>
+            <h2>Every answer moves the match</h2>
+            <p>Short rounds turn vocabulary and grammar practice into a loop you will want to play again.</p>
+          </div>
+          <div class="steps-grid">
+            <article class="step-card">
+              <span class="step-number">01</span>
+              <div class="step-icon icon-blue" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 5v4.6l3.2 1.9-1 1.7-4.2-2.5V7h2Z" /></svg></div>
+              <h3>Find a match</h3><p>Jump into a quick round and choose how you want to compete.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-number">02</span>
+              <div class="step-icon icon-orange" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-9 12h7l-1 8 10-13h-7V2Z" /></svg></div>
+              <h3>Answer under pressure</h3><p>Accuracy matters, but each mode gives speed a different role.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-number">03</span>
+              <div class="step-icon icon-purple" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17 3H7v2H3v4c0 2.2 1.8 4 4 4h.3a5 5 0 0 0 3.7 3.9V19H7v2h10v-2h-4v-2.1a5 5 0 0 0 3.7-3.9h.3c2.2 0 4-1.8 4-4V5h-4V3ZM7 11a2 2 0 0 1-2-2V7h2v4Zm12-2a2 2 0 0 1-2 2V7h2v2Z" /></svg></div>
+              <h3>Learn and climb</h3><p>Review the result, sharpen weak spots and rise through the rankings.</p>
+            </article>
+          </div>
         </div>
-    </div>
-</body>
+      </section>
+
+      <section class="section modes-section" id="game-modes">
+        <div class="shell">
+          <div class="section-heading centered heading-light">
+            <p class="kicker">Choose your battle</p>
+            <h2>Four modes. Four kinds of pressure.</h2>
+            <p>Switch the rules, test a different skill and keep every rematch fresh.</p>
+          </div>
+          <div class="modes-grid">
+            <article class="mode-card mode-elimination"><span class="mode-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 2h10v2h3v5a5 5 0 0 1-5 5h-.2a4 4 0 0 1-1.8 1.5V18h4v3H7v-3h4v-2.5A4 4 0 0 1 9.2 14H9a5 5 0 0 1-5-5V4h3V2Zm0 4H6v3a3 3 0 0 0 2.2 2.9A11.8 11.8 0 0 1 7 6Zm10 0c0 2.2-.4 4.2-1.2 5.9A3 3 0 0 0 18 9V6h-1Z" /></svg></span><p class="mode-label">Stay accurate</p><h3>Elimination</h3><p>One wrong answer can decide the whole match.</p></article>
+            <article class="mode-card mode-score"><span class="mode-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-9 12h7l-1 8 10-13h-7V2Z" /></svg></span><p class="mode-label">Build the lead</p><h3>Score</h3><p>Stack correct answers and be the first player to reach 50 points.</p></article>
+            <article class="mode-card mode-survival"><span class="mode-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-8-4.6-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6.4-8 11-8 11Z" /></svg></span><p class="mode-label">Protect your lives</p><h3>Survival</h3><p>Start with three lives, hold your nerve and outlast your rival.</p></article>
+            <article class="mode-card mode-reflex"><span class="mode-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M11 2h2v3h-2V2Zm7.1 2.5 1.4 1.4-2.1 2.2L16 6.6l2.1-2.1ZM4.5 5.9l1.4-1.4L8 6.6 6.6 8 4.5 5.9ZM12 7a6 6 0 0 1 6 6v1h2v3H4v-3h2v-1a6 6 0 0 1 6-6Zm-8 12h16v3H4v-3Z" /></svg></span><p class="mode-label">Race to the buzzer</p><h3>Reflex</h3><p>React quickly and be the first player to reach 10 correct answers.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-light opponent-section" id="opponents">
+        <div class="shell opponent-grid">
+          <div class="opponent-copy">
+            <p class="kicker">Transparent matchmaking</p>
+            <h2>You always know who you are facing.</h2>
+            <p>English Arena labels every matchup clearly. Compete with a live player when one is available, or continue with an AI opponent without pretending it is human.</p>
+            <ul class="check-list"><li><span>✓</span>Clear opponent identity</li><li><span>✓</span>Fast matchmaking fallback</li><li><span>✓</span>Rankings built around competition</li></ul>
+          </div>
+          <div class="matchup-card" aria-label="Example matchup: live player versus AI opponent">
+            <div class="match-player player-blue"><div class="player-avatar">A</div><span class="identity identity-live"><i></i>Live Opponent</span><strong>Arena Player</strong><small>Blue side</small></div>
+            <div class="versus">VS</div>
+            <div class="match-player player-orange"><div class="player-avatar">AI</div><span class="identity identity-ai">AI Opponent</span><strong>Arena Bot</strong><small>Orange side</small></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="practice-section">
+        <div class="shell practice-panel">
+          <img class="fox-wave" src="assets/fox-wave.png" alt="Foxy, the English Arena mascot, waving" width="607" height="927" loading="lazy" />
+          <div class="practice-copy">
+            <p class="kicker">Train between battles</p><h2>Practice alone. Return stronger.</h2>
+            <p>Work through solo practice, revisit weak spots and step back into the arena when you are ready for another challenge.</p>
+            <div class="practice-chips"><span>Vocabulary</span><span>Grammar</span><span>Weak spots</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="download-section" id="download">
+        <div class="shell download-card">
+          <div class="download-copy"><p class="kicker">The next match is waiting</p><h2>Ready to enter the arena?</h2><p>Download English Arena: World Battle on iOS or Android.</p></div>
+          <div class="store-actions compact-actions" aria-label="Download English Arena">
+            <a class="store-button" href="https://play.google.com/store/apps/details?id=com.ahmetselim.englisharena" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 2.4c-.4.4-.6 1-.6 1.8v15.6c0 .8.2 1.4.6 1.8l8.8-8.8v-1.6L3 2.4Zm11.6 5.8-2.8 2.9v1.8l2.8 2.9 3.6-2.1c1.1-.6 1.1-1.6 0-2.2l-3.6-2.1V8.2Z" /></svg><span><small>GET IT ON</small><strong>Google Play</strong></span></a>
+            <a class="store-button" href="https://apps.apple.com/app/id6758234886" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.2 12.7c0-2.7 2.2-4 2.3-4.1-1.3-1.8-3.2-2.1-3.9-2.1-1.7-.2-3.2 1-4.1 1-.9 0-2.2-1-3.7-1-1.9 0-3.7 1.1-4.7 2.8-2 3.4-.5 8.5 1.4 11.3.9 1.4 2.1 2.9 3.6 2.8 1.4-.1 2-1 3.7-1s2.2 1 3.7 1c1.5 0 2.5-1.4 3.4-2.8 1.1-1.6 1.5-3.1 1.5-3.2-.1 0-3.2-1.2-3.2-4.7Z" /></svg><span><small>Download on the</small><strong>App Store</strong></span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-grid">
+        <div class="footer-brand"><img src="assets/app-icon.png" alt="" width="44" height="44" loading="lazy" /><div><strong>English Arena: World Battle</strong><p>A Fastr Games production.</p></div></div>
+        <div class="footer-links"><a href="/English-arena-legal/">Privacy &amp; legal</a><a href="mailto:fastrgamestudio@gmail.com">Support</a></div>
+        <p class="copyright">© 2026 Ahmet Selim Şengüloğlu. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
 </html>
